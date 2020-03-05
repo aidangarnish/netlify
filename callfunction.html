@@ -16,7 +16,7 @@ function callLambda(){
       }
 
       // Examine the text in the response
-      response.json().then(function(data) {
+      response.text().then(function(data) {
         alert(data);
         console.log(data);
       });
