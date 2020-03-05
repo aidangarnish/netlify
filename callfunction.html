@@ -1,12 +1,12 @@
 <html>
 <body>
-
+<input type="text" id="name" name="fname"><br><br>
 <button onclick="callLambda()">Click me</button>
 
 <script>
 function callLambda(){
   
-  fetch('https://netlify.65hours.com/.netlify/functions/helloworld')
+  fetch('https://netlify.65hours.com/.netlify/functions/helloworld?name=' + document.getElementById("name").value)
   .then(
     function(response) {
       if (response.status !== 200) {
