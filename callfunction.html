@@ -7,9 +7,10 @@
 function callLambda(){
   fetch('https://netlify.65hours.com/.netlify/functions/helloworld')
     .then((response) => {
-      return alert(response.json());
+        return response.json();
     })
     .then((data) => {
+      alert(data);
       console.log(data);
     });
   }
