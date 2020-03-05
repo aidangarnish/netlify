@@ -1,0 +1,18 @@
+<html>
+<body>
+
+<button onclick="callLambda()">Click me</button>
+
+<script>
+function callLambda(){
+  fetch('https://netlify.65hours.com/.netlify/functions/helloworld')
+    .then((response) => {
+      return alert(response.json());
+    })
+    .then((data) => {
+      console.log(data);
+    });
+  }
+</script>
+</body>
+</html>
